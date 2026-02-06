@@ -9,10 +9,9 @@ export default {
         },
         extend: {
             colors: {
-                primary: '#D3245C',
-                secondary: '#2E0049',
-                terciary: '#E580A0',
-                violet: '#63198F',
+                primary: '#3B82F6',
+                secondary: '#1E3A8A',
+                terciary: '#93C5FD',
                 dark: '#131313',
                 gray: {
                     light: '#E8E9E9',
