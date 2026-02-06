@@ -6,7 +6,8 @@
     font-family: "Outfit", sans-serif;
 }
 
-html {
+html,
+main {
     height: 100%;
 }
 
@@ -17,10 +18,20 @@ body {
     color: #131313;
 }
 
-body>#__nuxt {
+body>div:first-of-type {
     height: 100%;
+    display: grid;
+    grid: "header" auto "main" 1fr "footer" auto / 1fr;
+}
+
+header {
+    grid-area: header;
 }
 
 main {
-    min-height: 86.5%;
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
 }
