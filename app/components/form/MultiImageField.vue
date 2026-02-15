@@ -3,13 +3,10 @@
         <FormLabel :id="id" :required="required" v-if="label">{{ label }}</FormLabel>
 
         <div class="flex flex-col gap-3">
-            <div @click="triggerFileInput" @dragover.prevent @dragenter.prevent="isDragging = true" @dragleave.prevent="isDragging = false" @drop.prevent="handleDrop"
-                class="bg-light border-2 border-dashed rounded-[5px] text-center cursor-pointer transition-colors p-6"
-                :class="{
-                    'border-primary bg-primary/5': isDragging,
-                    'border-gray-300': !isDragging && images.length === 0,
-                    'border-gray-400': !isDragging && images.length > 0
-                }">
+            <div @click="triggerFileInput" @dragover.prevent @dragenter.prevent="isDragging = true"
+                @dragleave.prevent="isDragging = false" @drop.prevent="handleDrop"
+                class="bg-light border-2 border-dashed border-gray-300 rounded-[5px] text-center cursor-pointer transition-colors p-6"
+                :class="isDragging && 'border-primary bg-primary/5'">
                 <div class="space-y-2">
                     <Icon name="tabler:cloud-upload" class="w-8 h-8 text-dark mx-auto" />
                     <p class="text-dark font-medium">
